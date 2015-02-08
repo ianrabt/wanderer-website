@@ -313,7 +313,13 @@
     <script src="js/bootstrap.min.js"></script>
 
     <!-- Custom Theme JavaScript -->
-    <script>
+    <script type="text/javascript">
+    $.ajax('http://192.168.91.135:8000/api/locations/?format=json').done(function(data) {
+        data = JSON.parse(data);
+        console.log(data);
+    });
+    </script>
+    <script type="text/javascript">
     // Closes the sidebar menu
     $("#menu-close").click(function(e) {
         e.preventDefault();
